@@ -1,3 +1,10 @@
+let reg = /['!@#$%^&*()']/;
+let string = document.querySelector('.global__input');
+
+string.oninput = function() {
+    this.value = this.value.replace(reg, '');
+}
+
 $(document).ready(function (){
     $(".header__burger").click(function(){
         $(".header__nav").toggleClass("header__nav--open")
